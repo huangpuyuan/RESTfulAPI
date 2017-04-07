@@ -96,8 +96,36 @@
 	* GET/collections/identity: 返回单个资源对象
 	* POST/collections: 返回新生的资源对象
 	
+### 实践--开发环境搭建--项目实战
+* 下载UPUPW.NET 集成环境
+* 添加虚拟主机，以及取消跨站目录限制
+* 添加虚拟主机的本地hosts解析
 
+##### 项目需求
+* 用户登录、注册
+* 文章发表、编辑、管理、列表
 
+##### 确认设计要素
+1. 资源路径： `/users 、/articles`
+1. HTTP动词： `GET/POST/DELETE/PUT`
+1. 过滤信息:  `文章分页筛选`
+1. 状态码： `200、404、422、403`
+1. 错误处理： 输出JSON格式错误信息
+1. 返回结果： JSON数组
+
+##### 数据库设计
+* 用户表：
+
+字段|ID  | 用户名 | 密码 | 注册时间 
+---|----|------  |----  |----
+字段名称|`user_id` | `username` | `password`  | `created_at`  
+类型|int |  varchar(20)   | char(32) | datetime  
+
+* 文章表 
+
+dog | bird | cat
+----|------|----
+foo | foo  | foo
 
 
 
